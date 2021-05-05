@@ -12,11 +12,13 @@
             </b-navbar-toggle>
             <b-collapse id="navbar-toggle-collapse" class="justify-content-end" is-nav v-model="isExpanded">
                 <b-navbar-nav>
-                    <b-nav-item @click="scrollToId" href="#Features">Характеристики</b-nav-item>
-                    <b-nav-item @click="scrollToId" href="#Catalog">Каталог</b-nav-item>
-                    <b-nav-item @click="scrollToId" href="#Delivery">Доставка</b-nav-item>
-                    <b-nav-item @click="scrollToId" href="#Portfolio">Наши работы</b-nav-item>
-                    <b-nav-item @click="scrollToId" href="#Contact">Контакты</b-nav-item>
+                    <b-nav-item>Home</b-nav-item>
+                    <b-nav-item>Services</b-nav-item>
+                    <b-nav-item>About</b-nav-item>
+                    <b-nav-item>Works</b-nav-item>
+                    <b-nav-item>Blog</b-nav-item>
+                    <b-nav-item>Clients</b-nav-item>
+                    <b-nav-item>Contact</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
         </b-container>
@@ -31,16 +33,29 @@
 
 <style scoped>
     #name_company{
-        font-size: 24px;
+        font-size: 23px;
         font-family: "Montserrat";
+        margin-left: 13px;
         color: rgb(255, 255, 255);
+        letter-spacing: .15px;
         font-weight: bold;
         line-height: 1.5;
         text-align: left;
-        position: absolute;
-        left: 228.274px;
-        top: 31.25px;
         z-index: 438;
+    }
+    .nav-link{
+        font-size: 14px;
+        font-family: "Montserrat";
+        letter-spacing: .28px;
+        padding: 0 16.8px !important;
+        color: rgb(255, 255, 255) !important;
+        line-height: 1.714;
+        text-align: left;
+    }
+    @media (min-width: 1200px){
+        .container, .container-sm, .container-md, .container-lg, .container-xl {
+            max-width: 1200px !important;
+        }
     }
 
 </style>
