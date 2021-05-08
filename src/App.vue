@@ -1,28 +1,60 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <b-container fluid>
+      <Home/>
+      <Services/>
+      <About_us/>
+      <Works/>
+      <Call/>
+      <Blog/>
+    </b-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+
+import Home from "./components/Home";
+import Services from "./components/Services";
+import About_us from "./components/About_us";
+import Works from "./components/Works";
+import Call from "./components/Call";
+import Blog from "./components/Blog";
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Blog,
+    Call,
+    Works,
+    About_us,
+    Services,
+    Home
+
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
 }
+/*контейнер на блоки на всю площадь экрана*/
+.container-fluid{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+/*контейнер на блоки посередине экрана*/
+.container{
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+}
+/*контейнер, который включает в себя повтор блоков*/
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+/*параметры сетки бутстрап*/
+
 </style>
