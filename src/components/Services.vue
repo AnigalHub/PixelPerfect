@@ -1,14 +1,14 @@
 <template>
     <div id="Services">
         <b-container>
-            <div id="name_Services">SERVICES</div>
-            <svg id="underline" xmlns="http://www.w3.org/2000/svg" width="50px" height="2px">
+            <div class="name_component">SERVICES</div>
+            <svg class="underline" xmlns="http://www.w3.org/2000/svg" width="50px" height="2px">
                 <path fill-rule="evenodd"  fill="rgb(85, 85, 85)" d="M0.000,1.999 L0.000,-0.000 L50.000,-0.000 L50.000,1.999 L0.000,1.999 "/>
             </svg>
-            <p id="We_offer_ipsum_dolor_sit_amet_consetetur_sadip">We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
+            <p class="descr_component">We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
             <div class="flex-container">
                 <div v-for="(value, index) in Services" :key="index">
-                    <div style="margin-left: 4.8%">
+                    <div style="margin-left: 4.7%">
                         <component :is="value.svg" class="svg_services"/>
                     </div>
 
@@ -53,9 +53,9 @@
 
 <style scoped  lang="scss">
     #Services{
-        margin-top: 95px;
-        margin-bottom: 95px;
-        #name_Services {
+        padding-top: 95px;
+        padding-bottom: 95px;
+        .name_component  {
             font-size: 20px;
             font-family: "Montserrat";
             color: rgb(85, 85, 85);
@@ -65,21 +65,22 @@
             text-align: center;
             z-index: 416;
         }
-        #We_offer_ipsum_dolor_sit_amet_consetetur_sadip {
+        .descr_component{
             font-size: 15.5px;
             font-family: "Roboto Slab";
             color: rgb(85, 85, 85);
             letter-spacing: .28px;
             line-height: 1.5;
             text-align: center;
-            margin-top: 50px;
+            margin-top: 25.25px;
             z-index: 414;
         }
-        #underline{
+        .underline{
             background-color: rgb(85, 85, 85);
-            position: absolute;
-            left: 928px;
-            top: 914px;
+            margin-top: 26px;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
             width: 50px;
             height: 2px;
             z-index: 415;
@@ -97,7 +98,7 @@
             font-family: "Montserrat";
             margin-top: 21.6px;
             color: rgb(85, 85, 85);
-            margin-bottom: 0.92rem !important;
+            margin-bottom: 0.9rem !important;
             font-weight: 600;
             text-transform: uppercase;
             text-align: center;
