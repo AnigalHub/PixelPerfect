@@ -7,6 +7,7 @@
       <Works/>
       <Call/>
       <Blog/>
+      <Clients/>
     </b-container>
   </div>
 </template>
@@ -20,9 +21,11 @@ import About_us from "./components/About_us";
 import Works from "./components/Works";
 import Call from "./components/Call";
 import Blog from "./components/Blog";
+import Clients from "./components/Clients";
 export default {
   name: 'App',
   components: {
+    Clients,
     Blog,
     Call,
     Works,
