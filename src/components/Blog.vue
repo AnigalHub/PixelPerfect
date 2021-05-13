@@ -78,8 +78,7 @@
 <style scoped lang="scss">
     #Blog {
         padding-top: 90px;
-        padding-bottom: 95px;
-        height: 98.6vh;
+        padding-bottom: 80px;
 
         .name_component {
             font-size: 20px;
