@@ -20,10 +20,11 @@
                                    ост
                                </div>
                            </div>
-
                        </b-col>
                        <b-col>
-
+                           <div class="name_post">
+                               STARTUP IDEAS NEEDS TO BE FUNDED
+                           </div>
                        </b-col>
                    </b-row>
                     <div class="text">
@@ -51,10 +52,11 @@
                                     ост
                                 </div>
                             </div>
-
                         </b-col>
                         <b-col>
-
+                            <div class="name_post">
+                               USER INTERFACE DESIGNING ELEMENTS
+                            </div>
                         </b-col>
                     </b-row>
                     <div class="text">
@@ -147,6 +149,22 @@
             font-size: 15px;
             padding-top: 10px;
         }
+        .name_post{
+            font-size: 16px;
+            font-family: "Montserrat";
+            color: rgb(85, 85, 85);
+            text-transform: uppercase;
+            line-height: 1.5;
+            text-align: left;
+            padding-top: 1.4%;
+            letter-spacing: -.18px;
+            padding-left: .5%;
+            font-weight: 600;
+        }
+        .col .col{
+            padding: 0 !important;
+        }
+
         .read {
             padding-top: 21.5px;
             font-size: 13.25px;
