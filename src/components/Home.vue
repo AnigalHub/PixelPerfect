@@ -57,8 +57,8 @@
         text-transform: uppercase;
         line-height: 1.5;
         font-weight: 500;
-        width: 1164px;
-        margin-top: 70px;
+        width: 1100px;
+        margin-top: 73px;
         text-align: center;
         z-index: 428;
     }
