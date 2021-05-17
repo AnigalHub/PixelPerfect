@@ -36,12 +36,13 @@
             font-size: 18px;
             font-family: 'Roboto Slab', serif;
             padding-bottom: 111px;
+            padding-left: 5px;
             letter-spacing: .28px;
             color: rgb(255, 255, 255);
             text-transform: uppercase;
             line-height: 1.5;
             font-weight: 500;
-            width: 1910px;
+            width: 1900px;
             margin-top: 5px;
             text-align: center;
             z-index: 428;
