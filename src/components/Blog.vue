@@ -124,7 +124,7 @@
             margin-top: 25.25px;
         }
         .blog{
-            padding-bottom: 25px;
+            padding-bottom: 26.5px;
         }
         .part_1,.part_2{padding-left: 30px !important;}
         .part_2 .text{
@@ -160,6 +160,9 @@
             letter-spacing: -.18px;
             padding-left: .5%;
             font-weight: 600;
+        }
+        .blog:nth-child(4) .name_post{
+            padding-top: 1.5% !important;
         }
         .col .col{
             padding: 0 !important;
