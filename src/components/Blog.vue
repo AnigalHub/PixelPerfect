@@ -25,6 +25,9 @@
                            <div class="name_post">
                                STARTUP IDEAS NEEDS TO BE FUNDED
                            </div>
+                           <div>
+                               By Khalil Uddin in Development
+                           </div>
                        </b-col>
                    </b-row>
                     <div class="text">
@@ -56,6 +59,9 @@
                         <b-col>
                             <div class="name_post">
                                USER INTERFACE DESIGNING ELEMENTS
+                            </div>
+                            <div>
+                                By Khalil Uddin in Development
                             </div>
                         </b-col>
                     </b-row>
