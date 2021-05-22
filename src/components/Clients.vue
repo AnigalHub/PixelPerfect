@@ -40,4 +40,14 @@
     .col{
         padding: 0 0 0 30px !important;
     }
+    .col:nth-child(2){
+        margin-left: 1.3%;
+        margin-top: -1%;
+    }
+    .col:nth-child(3){
+        padding-left: 15px !important;
+    }
+    .col:nth-child(4){
+        padding-left: 15px !important;
+    }
 </style>
