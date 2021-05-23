@@ -43,7 +43,7 @@
             </svg>
             <b-row class="blog">
                 <b-col cols="5" class="text part_1">
-                    <img src="../../public/blog1.png">
+                    <img src="../../public/blog2.png">
                 </b-col>
                 <b-col class="text part_2">
                     <b-row>
