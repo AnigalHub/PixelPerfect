@@ -18,6 +18,11 @@
                    <img src="../../public/clients2.png">
                </b-col>
            </b-row>
+            <div class="text">
+                Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                <br>
+                Temporibus autem quibusdam et aut officiis debitis aut rerum"
+            </div>
         </b-container>
     </div>
 </template>
@@ -50,4 +55,13 @@
     .col:nth-child(4){
         padding-left: 15px !important;
     }
+    .text {
+        margin-top: 4.8%;
+        font-size: 18px;
+        font-family: "Roboto Slab";
+        color: rgb(85, 85, 85);
+        line-height: 1.667;
+        text-align: center;
+    }
+
 </style>
