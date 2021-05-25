@@ -23,6 +23,7 @@
                 <br>
                 Temporibus autem quibusdam et aut officiis debitis aut rerum"
             </div>
+            <div class="author">John Doe,Google Inc.</div>
         </b-container>
     </div>
 </template>
@@ -58,6 +59,14 @@
     .text {
         margin-top: 4.8%;
         font-size: 18px;
+        font-family: "Roboto Slab";
+        color: rgb(85, 85, 85);
+        line-height: 1.667;
+        text-align: center;
+    }
+    .author{
+        margin-top: 2.1%;
+        font-size: 21px;
         font-family: "Roboto Slab";
         color: rgb(85, 85, 85);
         line-height: 1.667;
