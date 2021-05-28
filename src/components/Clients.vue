@@ -37,7 +37,7 @@
 <style scoped>
     #Clients{
         padding-top: 105px;
-        padding-bottom: 121px;
+        padding-bottom: 150px;
         background: #f8f8f8;
     }
     .row{
@@ -65,7 +65,7 @@
         text-align: center;
     }
     .author{
-        margin-top: 2.1%;
+        margin-top: 2.4%;
         font-size: 21px;
         font-family: "Roboto Slab";
         color: rgb(85, 85, 85);
