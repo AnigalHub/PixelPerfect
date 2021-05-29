@@ -26,18 +26,22 @@
                 <b-col>
                     <img src="../../public/14.png">
                     <div class="text">MD. KHALIL UDDIN</div>
+                    <div class="who">Head of Ideas</div>
                 </b-col>
                 <b-col>
                     <img src="../../public/13.png">
                     <div class="text">RUBEL MIAH</div>
+                    <div class="who">Lead WordPress Developer</div>
                 </b-col>
                 <b-col>
                     <img src="../../public/12.png">
                     <div class="text">SHAMIM MIA</div>
+                    <div class="who">Sr. Web Developer</div>
                 </b-col>
                 <b-col>
                     <img src="../../public/11.png">
                     <div class="text">JOHN DOE</div>
+                    <div class="who">Front-end Developer</div>
                 </b-col>
             </b-row>
         </b-container>
@@ -53,7 +57,7 @@
 <style scoped lang="scss">
     #About{
         padding-top: 95px;
-        padding-bottom: 121px;
+        padding-bottom: 95px;
         background: #f8f8f8;
         .name_component {
             font-size: 20px;
@@ -94,6 +98,14 @@
             text-align:left;
             margin-top: 25.25px;
             z-index: 414;
+        }
+        .who{
+            font-size: 13px;
+            font-family: "Roboto Slab";
+            color: rgb(85, 85, 85);
+            line-height: 1.846;
+            padding-top: 2px;
+            text-align: center;
         }
         .parts{
             margin-top: 37.5px;
