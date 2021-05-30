@@ -9,6 +9,7 @@
       <Blog/>
       <Clients/>
       <Feedback/>
+      <Footer/>
     </b-container>
   </div>
 </template>
@@ -24,9 +25,11 @@ import Call from "./components/Call";
 import Blog from "./components/Blog";
 import Clients from "./components/Clients";
 import Feedback from "./components/Feedback";
+import Footer from "./components/footer";
 export default {
   name: 'App',
   components: {
+    Footer,
     Feedback,
     Clients,
     Blog,
