@@ -6,6 +6,14 @@
                 <path fill-rule="evenodd"  fill="rgb(85, 85, 85)" d="M0.000,1.999 L0.000,-0.000 L50.000,-0.000 L50.000,1.999 L0.000,1.999 "/>
             </svg>
             <p class="descr_component">Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
+            <b-row>
+                <b-col cols="3">
+
+                </b-col>
+                <b-col>
+
+                </b-col>
+            </b-row>
         </b-container>
     </div>
 </template>
@@ -20,6 +28,7 @@
     #Feedback {
         padding-top: 90px;
         padding-bottom: 80px;
+        height: 70vh;
 
     .name_component {
         font-size: 20px;
