@@ -39,7 +39,6 @@
         margin-bottom: 2.55rem !important;
         font-weight: 600;
         text-align: center;
-        z-index: 434;
     }
     #Your_Favourite_Creative_Age {
         font-size: 19px;
@@ -48,7 +47,6 @@
         line-height: 0.5;
         letter-spacing: 0.65px;
         text-align: center;
-        z-index: 434;
     }
     #Get_Started {
         font-size: 16px;
@@ -57,10 +55,13 @@
         text-transform: uppercase;
         line-height: 1.5;
         font-weight: 500;
-        width: 1100px;
-        margin-top: 73px;
+
         text-align: center;
-        z-index: 428;
+        border: 2px solid white;
+        width: 17%;
+        padding: 1% 1% 1% .5%;
+        display: block;
+        margin: 59.5px auto 0;
     }
 
 
