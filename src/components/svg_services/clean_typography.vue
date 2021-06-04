@@ -1,5 +1,5 @@
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" width="93px" height="91px">
+    <svg xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd"  stroke="rgb(221, 221, 221)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(192, 48, 28)"
               d="M46.000,1.000 C70.853,1.000 91.000,21.147 91.000,46.000 C91.000,70.853 70.853,91.000 46.000,91.000 C21.147,91.000 1.000,70.853 1.000,46.000 C1.000,21.147 21.147,1.000 46.000,1.000 Z"/>
         <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
