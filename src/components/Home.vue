@@ -26,23 +26,23 @@
     height: 770px;
     #background{
         padding-top: 20px;
-        background-color: rgba(0, 0, 0, 0.48);
+        background-color: rgba(0, 0, 0, 0.45);
         height: 100%;
     }
     #Welcome_to_STARTUP{
+        margin-top: 249.5px;
         font-size: 47.8px;
-        font-family: "Montserrat";
+        font-family: 'Montserrat', sans-serif;
         color: rgb(255, 255, 255);
         text-transform: uppercase;
         line-height: 0.5;
-        margin-top: 248px;
         margin-bottom: 2.55rem !important;
         font-weight: 600;
         text-align: center;
     }
     #Your_Favourite_Creative_Age {
         font-size: 19px;
-        font-family: "Roboto Slab";
+        font-family: 'Roboto Slab', serif;
         color: rgb(255, 255, 255);
         line-height: 0.5;
         letter-spacing: 0.65px;
@@ -50,18 +50,17 @@
     }
     #Get_Started {
         font-size: 16px;
-        font-family: "Montserrat";
+        font-family: 'Montserrat', sans-serif;
         color: rgb(255, 255, 255);
         text-transform: uppercase;
         line-height: 1.5;
         font-weight: 500;
-
         text-align: center;
         border: 2px solid white;
-        width: 17%;
-        padding: 1% 1% 1% .5%;
+        width: 180px;
+        padding: 1% ;
         display: block;
-        margin: 59.5px auto 0;
+        margin: 57px auto 0 41.5%;
     }
 
 
