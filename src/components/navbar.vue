@@ -44,10 +44,12 @@
         z-index: 438;
     }
     .nav-link{
-        font-size: 14px;
+        font-size: 13.7px;
         font-family: "Montserrat";
-        letter-spacing: .28px;
-        padding: 0 16.8px !important;
+        letter-spacing: .48px;
+        font-weight: 500;
+        margin-top: 1%;
+        padding: 0 16.5px 0 !important;
         color: rgb(255, 255, 255) !important;
         line-height: 1.714;
         text-align: left;
