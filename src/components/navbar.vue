@@ -34,7 +34,7 @@
 <style scoped>
     #name_company{
         font-size: 23px;
-        font-family: "Montserrat";
+        font-family: 'Montserrat', sans-serif;
         margin-left: 13px;
         color: rgb(255, 255, 255);
         letter-spacing: .15px;
@@ -45,11 +45,10 @@
     }
     .nav-link{
         font-size: 13.7px;
-        font-family: "Montserrat";
+        font-family: 'Montserrat', sans-serif;
         letter-spacing: .48px;
         font-weight: 500;
-        margin-top: 1%;
-        padding: 0 16.5px 0 !important;
+        padding: 2px 16.45px 0 !important;
         color: rgb(255, 255, 255) !important;
         line-height: 1.714;
         text-align: left;
