@@ -104,7 +104,7 @@ $shadeOfGrey:rgb(85, 85, 85);
   }
 }
 .name_component  {
-  font-size: 19.5px;
+  font-size: 19.8px;
   font-family: 'Montserrat', sans-serif;
   color: rgb(85, 85, 85);
   font-weight: 600;
@@ -123,16 +123,14 @@ $shadeOfGrey:rgb(85, 85, 85);
 }
 .underline{
   background-color: rgb(85, 85, 85);
-  margin-top: 25px;
+  margin: 25px auto 0;
   display: block;
-  margin-right: auto;
-  margin-left: auto;
   width: 50px;
   height: 2px;
 }
 #Services{
   padding-top: 95px;
-  padding-bottom: 95px;
+  height: 61.7vh;
   text-align: center;
   color: $shadeOfGrey;
   .flex-container{
@@ -164,14 +162,52 @@ $shadeOfGrey:rgb(85, 85, 85);
     width: 93px;
     height: 91px;
     display: block;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
   }
-
-
+}
+#About{
+  padding-top: 95px;
+  padding-bottom: 95px;
+  background: #f8f8f8;
+  .text {
+    font-size: 13.5px;
+    font-family: "Roboto Slab";
+    color: rgb(85, 85, 85);
+    letter-spacing: .28px;
+    line-height: 1.8;
+    text-align:left;
+    margin-top: 25.25px;
+    z-index: 414;
+  }
+  .who{
+    font-size: 13px;
+    font-family: "Roboto Slab";
+    color: rgb(85, 85, 85);
+    line-height: 1.846;
+    padding-top: 2px;
+    text-align: center;
+  }
+  .parts{
+    margin-top: 37.5px;
+    padding-bottom: 30px;
+  }
+  .part_1{padding-left: 30px !important;}
+  .part_2{padding-left: 0 !important;}
+  .imgs{
+    margin-top: 35px;
+    .col:first-child{
+      padding-left: 30px !important;
+    }
+    .text{
+      margin-top: 15px;
+      font-size: 13px;  font-family: "Montserrat";
+      letter-spacing: .28px;
+      text-align: center;
+    }
+  }
 }
 @media (min-width: 1200px){
-  #Services{
+  #Services,#About{
     .container, .container-sm, .container-md, .container-lg, .container-xl {max-width: 1200px !important;}
   }
 }
