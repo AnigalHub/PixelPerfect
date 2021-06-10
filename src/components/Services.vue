@@ -12,7 +12,7 @@
                         <component :is="value.svg" class="svg_services"/>
                     </div>
                     <p class="name_services">{{value.name_services}}</p>
-                    <div class="descr_services">{{value.descr_services}}</div>
+                    <div class="text">{{value.descr_services}}</div>
                 </div>
             </div>
         </b-container>
