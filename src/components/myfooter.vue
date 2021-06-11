@@ -42,7 +42,7 @@
 <style scoped lang="scss">
 #Footer{
     background-color: rgb(192, 48, 28);
-    height: 35vh;
+    height: 320px;
     #twitter{
         display: block;
         width: 130px;
@@ -52,7 +52,9 @@
     }
     svg{
         width: 25px;
-        height: 20px; border: 2px solid white;   border-radius: 50%;
+        height: 20px;
+        border: 2px solid white;
+        border-radius: 50%;
     }
     .col{
 
