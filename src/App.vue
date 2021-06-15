@@ -9,7 +9,7 @@
       <Blog/>
       <Clients/>
       <Feedback/>
-      <Footer/>
+      <MyFooter/>
     </b-container>
   </div>
 </template>
@@ -25,11 +25,11 @@ import Call from "./components/Call";
 import Blog from "./components/Blog";
 import Clients from "./components/Clients";
 import Feedback from "./components/Feedback";
-import Footer from "./components/myfooter";
+import MyFooter from "./components/myfooter";
 export default {
   name: 'App',
   components: {
-    Footer,
+    MyFooter,
     Feedback,
     Clients,
     Blog,
@@ -64,94 +64,127 @@ export default {
   flex-wrap: wrap;
 }
 $shadeOfWhite:rgb(255, 255, 255);
-$shadeOfGrey: rgb(85, 85, 85);
+$shadeOfGray: rgb(85, 85, 85);
+$shadeOfLightGray: rgb(119, 119, 119);
 $shadeOfRed:rgb(192, 48, 28);
-$fontFirst:'Roboto Slab', serif;
-$fontSecond:'Montserrat', sans-serif;
 
+#Home #Welcome_to_STARTUP, #Home #Get_Started, .name_component, #Services .name_services, #Call #Get_Started, #Blog .date, #Blog .name_post, #Blog .read, #Feedback .name_information, #Feedback input, #Feedback textarea, #Feedback button, #MyFooter #designer{
+  text-transform: uppercase;
+}
+#Home, .name_component,.descr_component, #Services, #About .flex-container .text, #About .who, #Call, #Blog .date, #Clients .phrase, #Clients .author, #Feedback button, #MyFooter #designer{
+  text-align: center;
+}
+#Home #Your_Favourite_Creative_Age,.descr_component,.text, #About .who, #Works, #Call #question, #Call #Get_Started, #Blog .author, #Blog .description, #Blog .read, #Clients .phrase, #Clients .author, #Feedback .descr_information, #Feedback .warning, #Feedback input, #Feedback textarea, #Feedback button, #MyFooter #designer{
+  font-family: 'Roboto Slab', serif;
+}
+#Nav #name_company, #Nav .nav-link, #Home #Welcome_to_STARTUP, #Home #Get_Started, .name_component, #Services .name_services, #About .flex-container .text, #Blog .date, #Blog .name_post, #Feedback .name_information{
+  font-family: 'Montserrat', sans-serif;
+}
+.navbar-light .navbar-toggler, #Nav #name_company, #Nav .nav-link, #Home, #Call, #MyFooter #designer{
+  color: $shadeOfWhite !important;
+}
+.name_component, .descr_component, #Services, #About, #Works a, #Blog .name_post, #Blog .description, #Clients .phrase, #Clients .author, #Feedback, #Feedback button{
+  color: $shadeOfGray !important;
+}
+#Blog .date, #Blog .author, #Blog .read{
+  color: $shadeOfLightGray;
+}
+#Home #Get_Started, #Call #Get_Started, #MyFooter .flex-container svg{
+  border: 2px solid $shadeOfWhite;
+}
+#About, #Clients{
+  background: #f8f8f8;
+}
+#Blog .author, #Clients .phrase{
+  font-style: italic;
+}
+.text, #About .who, #Call, #Blog .month, #Feedback .name_information, #Feedback button{
+  letter-spacing: .28px;
+}
+#Home #Welcome_to_STARTUP, #Home #Get_Started, .name_component, #Services .name_services, #About .flex-container .text, #Blog .name_post, #Blog .read, #Feedback .name_information, #Feedback input, #Feedback textarea, #Feedback button{
+  font-weight: 600;
+}
+#Nav #name_company, #Nav .nav-link, .descr_component, #Works .nav-link, #Call #question, #Blog .name_post{
+  line-height: 1.5;
+}
+.text, #About .who, #Blog .description{
+  line-height: 1.8;
+}
+#Services, #About, #Works, #Clients{
+  padding-top: 95px;
+}
+.navbar-light .navbar-toggler {border-color: $shadeOfWhite !important;}
+
+#Nav{
+  #name_company{
+    font-size: 23px;
+    margin-left: 13px;
+    letter-spacing: .15px;
+    font-weight: bold;
+  }
+  .nav-link{
+    font-size: 13.7px;
+    letter-spacing: .48px;
+    font-weight: 500;
+    padding: 2px 16.45px 0 !important;
+  }
+}
 #Home{
   background: url("../public/Home/background.png") 100% 100% no-repeat;
   background-size:100% 100%;
   height: 770px;
-  color: $shadeOfWhite;
   #background{
     padding-top: 20px;
     background-color: rgba(0, 0, 0, 0.45);
     height: 100%;
   }
   #Welcome_to_STARTUP{
-    margin-top: 249.5px;
     font-size: 47.8px;
-    margin-bottom: 2.55rem;
-    font-weight: 600;
-    text-align: center;
+    margin: 249.5px 0 2.55rem;
   }
   #Your_Favourite_Creative_Age {
     font-size: 19px;
-    font-family: $fontFirst;
     letter-spacing: 0.65px;
+    text-transform: capitalize;
   }
   #Get_Started {
     font-size: 16px;
-    font-weight: 500;
-    border: 2px solid $shadeOfWhite;
     width: 180px;
-    padding: 1% ;
-    margin: 57px auto 0 41.5%;
+    padding: 1%;
+    margin: 58px auto 58px 41.5%;
   }
   #Welcome_to_STARTUP,  #Your_Favourite_Creative_Age{line-height: 0.5;}
-  #Welcome_to_STARTUP, #Your_Favourite_Creative_Age, #Get_Started{text-align: center;}
-  #Welcome_to_STARTUP,#Get_Started{
-    font-family: $fontSecond;
-    text-transform: uppercase;
-  }
 }
 .name_component{
   font-size: 19.8px;
-  font-family: $fontSecond;
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  text-transform: uppercase;
   line-height: 1.2;
-  text-align: center;
 }
 .underline{
-  background-color: rgb(85, 85, 85);
-  margin: 26px auto 0 ;
+  background-color: $shadeOfGray;
+  margin: 26px auto 0;
   display: block;
   width: 50px;
   height: 2px;
 }
 .descr_component{
   font-size: 15.5px;
-  font-family: $fontFirst;
-  color: rgb(85, 85, 85);
-  letter-spacing: .28px;
-  line-height: 1.5;
-  text-align: center;
+  letter-spacing: .32px;
   margin-top: 24.8px;
 }
+.text{font-size: 13.5px;}
 #Services{
-  padding-top: 95px;
   height: 578px;
-  text-align: center;
-  color: $shadeOfGrey;
-  letter-spacing: 0.28px;
   .flex-container{
     margin-top: 68px;
     & > div {
       width: 30%;
-      height: 100%;
-      margin: 0 1.4% 0 1.82% !important;
+      margin: 0 1.58% 0 1.7% !important;
       .name_services{
         font-size: 13.9px;
-        font-family: $fontSecond;
-        margin-top: 24px;
+        margin: 25px 0 0.8rem !important;
         letter-spacing: -.1px;
-        margin-bottom: 0.8rem !important;
-        font-weight: 600;
-        text-transform: uppercase;
       }
+      .svg{margin: -2px 0 0 16.8px;}
       .svg_services{
         width: 93px;
         height: 91px;
@@ -161,17 +194,8 @@ $fontSecond:'Montserrat', sans-serif;
     }
   }
 }
-.text{
-  font-size: 13.5px;
-  font-family: $fontFirst;
-  letter-spacing: .28px;
-  line-height: 1.8;
-}
 #About{
-  padding-top: 95px;
   height: 852px;
-  background: #f8f8f8;
-  color: rgb(85, 85, 85);
   .parts{
     margin-top: 62.75px;
     padding-bottom: 30px;
@@ -179,23 +203,15 @@ $fontSecond:'Montserrat', sans-serif;
     .col:last-child{padding-left: 0 !important;}
   }
   .flex-container{
-    margin-top: 35px;
-    margin-left: 5px;
+    margin: 35px 0 0 5px;
     & > div{
+      img{width: 98.5%;}
+
       width: 23%;
       margin: 0 1%;
-      .text,.who{text-align: center;}
-      .text{
-        margin-top: 15px;
-        font-weight: 600;
-        font-family: $fontSecond;
-        margin-left: 1%;
-      }
+      .text{margin: 15px 0 0 1%;}
       .who{
         font-size: 12.6px;
-        font-family: $fontFirst;
-        letter-spacing: .28px;
-        line-height: 1.8;
         padding-top: 3.5px;
       }
       &:nth-child(2) .who{margin-left: 2px;}
@@ -205,20 +221,17 @@ $fontSecond:'Montserrat', sans-serif;
   }
 }
 #Works {
-  padding-top: 95px;
   height: 1381px;
-  font-family: $fontFirst;
-  a{color: $shadeOfGrey !important;}
   .navbar-nav{
     display: flex;
     margin: 15px auto 0;
     flex-direction:initial;
     .nav-link{
-      line-height: 1.5;
       font-size: 16px;
-      padding: 0.5rem 14px 0.5rem  11.8px !important;
-      letter-spacing: .28px;
+      padding: 0.5rem 14px 0.5rem 11.75px !important;
+      letter-spacing: 0.245px;
     }
+    #first a{color: $shadeOfRed !important;}
   }
   .flex-container {
     margin-top: 60px;
@@ -232,163 +245,87 @@ $fontSecond:'Montserrat', sans-serif;
 #Call{
   background: url("../public/Call/Call.png") 100% 100% no-repeat;
   background-size:100% 100%;
-  color: $shadeOfWhite;
-  letter-spacing: .28px;
-  text-align: center;
   #background{
     background-color: rgb(192, 48, 28,.65);
-    padding-bottom: 98px;
+    padding-bottom: 100px;
   }
   #question{
     font-size: 29.5px;
-    padding-top: 90px;
-    padding-bottom: 43px;
-  }
-  #question,#Get_Started{
-    font-family: $fontFirst;
-    line-height: 1.5;
+    padding: 90px 0 42px;
   }
   #Get_Started {
-    font-size: 18px;
-    text-transform: uppercase;
-    border: 2px solid $shadeOfWhite;
+    font-size: 17px;
     width: 180px;
     padding: 10px 10px 10px 15px;
-    margin: 0 auto 0 45.3%;
+    margin: 0 auto 0 45.22%;
   }
 }
 #Blog {
   padding-top: 92px;
   height: 1079px;
-
   .underline{margin-top: 25px;}
-  .descr_component{
-    margin-top: 24px;
-    margin-bottom: 28px;
-  }
+  .descr_component{margin: 24px 0 28px;}
   .blog{
-    padding-top: 38px;
+    padding-top: 39px;
     margin-left: 1px;
-    .col-5{
-      margin-bottom: 38px;
-    }
+    .col-5{margin-bottom: 38px;}
     .part_2{
-      padding-left: 20px !important;
-      padding-right: 20px !important;
+      padding:0 20px !important;
       .col-2{
         .date {
           font-size: 24px;
-          color: rgb(119, 119, 119);
-          font-family: $fontSecond;
-          letter-spacing: -1.6px;
+          letter-spacing: -.9px;
           line-height: 1;
-          text-align: center;
           font-weight: bold;
-          text-transform: uppercase;
           padding: 16px;
-          border: 2px solid rgb(119, 119, 119);
+          border: 2px solid $shadeOfLightGray;
           width: 75px;
           height: 77px;
         }
         .month{
           font-size: 15px;
-          padding-top: 4px;
+          padding-top: 3px;
         }
       }
       .col{
         padding: 0 !important;
         .name_post{
           font-size: 16px;
-          font-family: $fontSecond;
-          color: $shadeOfGrey;
-          text-transform: uppercase;
-          line-height: 1.5;
-          text-align: left;
-          padding-top: 10px;
+          padding: 10px 0 0 4px;
           letter-spacing: -.2px;
-          padding-left: 4px;
-          font-weight: 600;
         }
         .author{
           font-size: 13px;
-          font-family: $fontFirst;
-          font-style: italic;
-          color: rgb(119, 119, 119);
+          margin-left: 2px;
           padding-top: 7px;
-          letter-spacing: .2px;
+          letter-spacing: .1px;
         }
       }
       .description {
         font-size: 13.55px;
-        font-family: $fontFirst;
-        color: rgb(85, 85, 85);
         letter-spacing: .292px;
-        line-height: 1.8;
-        text-align:left;
-        margin-top: 16px;
-        margin-left: 2px;
+        margin: 16px 0 0 2px;
       }
       .read {
         font-size: 13.25px;
-        font-family: $fontFirst;
-        color: rgb(119, 119, 119);
-        font-weight: bold;
         letter-spacing: .75px;
         padding-top: 24px;
-        text-transform: uppercase;
+
       }
     }
-    svg{
-     // margin-top: 38px;
-      margin-left: 15px;
-      margin-bottom: 3px;
-      &:last-child{
-       display: none;
+    &:nth-child(4){
+      .name_post,.read,span{
+        color: $shadeOfRed !important;
       }
     }
+    svg{margin: 0 0 -3px 15px;}
+    &:last-child{
+      svg{display: none;}
+    }
   }
- /*
-
-  .part_1,.part_2{}
-  .part_2 .text{
-    padding: 0 12px 0 2px;
-    margin-top: 18px;
-  }
-
-  .name_post{
-    font-size: 16px;
-    font-family: $fontSecond;
-    color: rgb(85, 85, 85);
-    text-transform: uppercase;
-    line-height: 1.5;
-    text-align: left;
-    padding-top: 1.4%;
-    letter-spacing: -.18px;
-    padding-left: .5%;
-    font-weight: 600;
-  }
-  .blog:nth-child(4) .name_post{padding-top: 1.5% !important;}
-  .col .col{padding: 0 !important;}
-  .read {
-    padding-top: 21.5px;
-    font-size: 13.25px;
-    letter-spacing: .75px;
-    font-family: $fontFirst;
-    color: rgb(119, 119, 119);
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1.846;
-  }
-  svg{
-    margin-top: 35px;
-    margin-left: 32px;
-    margin-bottom: 3px;
-  } */
 }
 #Clients{
-  padding-top: 95px;
   height: 475px;
-  background: #f8f8f8;
   .flex-container {
     padding-top: 10px;
     margin: 2px 0 0 90px;
@@ -397,78 +334,70 @@ $fontSecond:'Montserrat', sans-serif;
       margin-right: 45px;
       &:first-child,&:nth-child(3),&:nth-child(4){margin-top: 0;}
       &:nth-child(2),&:nth-child(5){margin-top: -10px;}
-      &:first-child{margin-left: 15px;}
-      &:nth-child(2){margin-left: 15px;}
+      &:first-child, &:nth-child(2){margin-left: 15px;}
       &:nth-child(3){margin-left: 17px;}
       &:nth-child(4){margin-left: 20px;}
       &:nth-child(5){margin-left: 30px;}
     }
   }
   .phrase {
-    margin-top: 61px;
-    margin-left: -1px;
-    font-size: 18px;
+    font-size: 17.8px;
+    letter-spacing: 0.18px;
+    margin: 61px 0 0 -3.5px;;
   }
   .author{
-    margin-top: 2.4%;
     font-size: 21px;
+    letter-spacing: -.4px;
+    margin-top: 2.4%;
   }
-  .phrase,.author{
-    font-family: $fontFirst;
-    color: $shadeOfGrey;
-    text-align: center;
-    line-height: 1.667;
-  }
+  .phrase,.author{line-height: 1.7;}
 }
-#Feedback {
-  padding-top: 95px;
-  padding-bottom: 80px;
+#Feedback{
+  padding: 96px 0 80px;
   height: 661px;
   .row{
-    padding-top: 25px;
+    padding-top: 25.3px;
     .col-4{
       .row{
-        margin-bottom:9.5px;
+        margin-bottom:6px;
+        &:first-child{
+          .descr_information{margin-top: 13px;}
+        }
+        &:nth-child(2){
+          margin-bottom:5.5px;
+          .descr_information{margin-top: 10px;}
+        }
+        &:last-child{
+          .name_information{margin: 3px 0 0 11px;}
+          .descr_information{margin-top: 10px;}
+          .part_information{margin: 3px 0 0 -1px;}
+        }
       }
       .name_information{
-        font-size: 13.9px;
-        letter-spacing: .28px;
-        font-weight: 600;
+        font-size: 13.3px;
         margin-left: 8px;
-        text-transform: uppercase;
-        font-family: $fontSecond;
       }
       .descr_information{
-        font-family: $fontFirst;
         font-size: 12px;
-        font-weight: 400;
-        margin-left: 10px;
-        margin-top: 10px;
+        margin: 14.5px 0 0 10px;
       }
-      svg{
-        margin-left: 15px;
-        margin-top: -8px;
-      }
+      .part_information{margin-top: 2px;}
+      svg{margin: -7.5px 0 0 15px;}
     }
-
   }
   form{
-    margin-left: 10px;
-    margin-right: 30px;
+    margin: 0 30px 0 10px;
     input {height: 45px;}
+    #name{border: 1px solid $shadeOfRed;}
     textarea{height: 105px;}
     input,textarea{
+      font-size: 11.8px;
       padding: 14px 16px;
       border-radius: 0 !important;
-      font-size: 11.8px;
       margin-bottom: 20px;
     }
     input,textarea,button{
-      text-transform: uppercase;
-      border: 1px solid $shadeOfGrey;
-      font-family: $fontFirst;
-      color: $shadeOfGrey;
-      font-weight: 500;
+      border: 1px solid $shadeOfGray;
       border-radius: 0 !important;
     }
     button{
@@ -476,22 +405,404 @@ $fontSecond:'Montserrat', sans-serif;
       font-size: 12px;
       padding: 12px 15px;
       width: 170px;
-      text-align: center;
-      letter-spacing: .28px;
       margin-right: 39px;
       float: left;
     }
     .warning{
       padding-top: 14px;
       font-size: 11.6px;
-      font-family: $fontFirst;
-      letter-spacing: .28px;
+      letter-spacing: .22px;
       span{color: $shadeOfRed;}
     }
   }
-
+}
+#MyFooter{
+  background-color: $shadeOfRed;
+  height: 320px;
+  .flex-container{
+    padding-top: 101px;
+    margin-left: 465px;
+    & > div{margin-right: 16px;}
+    svg{
+      width: 33px;
+      height: 33px;
+      padding: 6px;
+      border-radius: 50%;
+    }
+  }
+  .underline{margin: 32px auto 0;}
+  #designer{
+    padding-top: 25px;
+    font-size: 12px;
+  }
 }
 
+@media screen and (max-width: 500px) {
+  #Services, #About, #Works, #Blog, #Clients, #Feedback{padding-top: 40px;}
+  #Home {
+    background-size:cover;
+    height: auto;
+    #background{padding-bottom: 65px;}
+    #Welcome_to_STARTUP {
+      font-size: 20px;
+      margin: 120px 0 2.55rem;
+    }
+    #Your_Favourite_Creative_Age {
+      font-size: 15px;
+      line-height: 20px;
+    }
+    #Get_Started {margin: 58px auto 0;}
+  }
+  #Services,#About,#Works,#Blog,#Clients,#Feedback{
+    height: auto;
+    padding-bottom: 35px;
+  }
+  #Services .flex-container, #About .parts, #Works .flex-container {margin-top: 25px !important;}
+  #Services{
+    .flex-container > div {
+      width: 100%;
+      margin: 5px 0  !important;
+    }
+  }
+  #About{
+    .parts{
+      padding-bottom: 20px;
+      flex-direction: column;
+      .col:first-child, .col:last-child{padding-left: 15px !important;}
+      .col:first-child{padding-bottom: 15px;}
+    }
+    .flex-container{
+      margin: 15px 0 0 15px;
+      & > div {
+        img{width: 94%;}
+        width: 46%;
+        margin: 0 1%;
+        .who{padding-bottom: 10px;}
+      }
+    }
+  }
+  #Works {
+     .navbar-nav {
+      display: block;
+       text-align: center;
+       .nav-link{
+         padding: 0.25rem 0 !important;
+       }
+    }
+    .flex-container {
+      margin-top: 60px;
+      & > img {width: 47%;}
+    }
+  }
+  #Call{
+    #background{padding-bottom: 40px;}
+    #question {
+      font-size: 20px;
+      padding: 50px 0 20px;
+    }
+    #Get_Started {
+      padding: 5px;
+      margin: 0 auto;
+    }
+  }
+  #Blog{
+    img{width: 100%;}
+    .blog {
+      padding-top: 10px;
+      margin-left: -15px;
+      flex-direction: column;
+      .col-5{
+        flex: 0 0 90% !important;
+        max-width: 90% !important;
+        padding-bottom: 20px;
+        display: block;
+        margin: 0 auto;
+      }
+      .part_2{
+        margin-left: -15px;
+        padding: 0 40px !important;
+        .col-2 .date {
+          padding: 6.6px;
+          width: 54px;
+          height: 58px;
+        }
+        .col{
+          padding-left: 8px !important;
+          .name_post{padding: 0 0 0 30px;}
+          .author {
+            margin-left: -45px;
+            padding-top: 20px;
+          }
+        }
+        .read {padding-top: 10px;}
+      }
+      svg {
+        width: 170px;
+        margin: 10px auto !important;
+      }
+    }
+  }
+  #Clients{
+    .flex-container {
+      margin: 10px 0 0;
+      & > div{
+        margin-left: 30px !important;
+        margin-right: 0 !important;
+        margin-bottom: 25px;
+        &:last-child{
+          margin-top: 5px !important;
+          margin-left: 28% !important;
+        }
+      }
+    }
+    .phrase {
+      font-size: 13.5px;
+      margin: 0;
+    }
+    .author{font-size: 15.5px;}
+  }
+  #Feedback{
+    .row{
+      padding: 5px 0;
+      flex-direction: column;
+      .row{flex-direction: inherit;}
+      form{
+        .row{flex-direction: column;}
+        button{
+          margin-bottom: 10px;
+          margin-right: 100%;
+        }
+      }
+      .col-4{
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  }
+  #MyFooter{
+    height: 215px;
+    .flex-container{
+      padding-top: 40px;
+      margin-left: 25%;
+    }
+  }
+}
+@media screen and (min-width:500px) and (max-width: 768px) {
+  #Services, #About, #Works, #Blog, #Clients, #Feedback{padding-top: 40px;}
+  #Home {
+    background-size:cover;
+    height: auto;
+    #background{padding-bottom: 65px;}
+    #Welcome_to_STARTUP {
+      font-size: 35px;
+      margin: 120px 0 2.55rem;
+    }
+    #Get_Started {margin: 58px auto 0;}
+  }
+  #Services,#About,#Works,#Blog,#Clients,#Feedback{
+    height: auto;
+    padding-bottom: 45px;
+  }
+  #Services .flex-container, #About .parts, #Works .flex-container {margin-top: 25px !important;}
+  #Services{
+    .flex-container > div {
+      width: 45%;
+      margin: 0 1.58% 0 1.7% !important;
+      &:last-child{margin: 0 auto !important;}
+    }
+  }
+  #About{
+    .parts{
+      padding-bottom: 20px;
+      flex-direction: column;
+      .col:first-child, .col:last-child{padding-left: 15px !important;}
+      .col:first-child{padding-bottom: 15px;}
+    }
+    .flex-container{
+      margin: 15px 0 0 15px;
+      & > div {
+        img{width: 94%;}
+        width: 46%;
+        margin: 0 1%;
+        .who{padding-bottom: 10px;}
+      }
+    }
+  }
+  #Works {
+    .flex-container {
+      margin-top: 60px;
+      & > img {width: 47%;}
+    }
+  }
+  #Call{
+    #background{padding-bottom: 40px;}
+    #question {padding: 42px 0;}
+    #Get_Started {margin: 0 auto ;}
+  }
+  #Blog{
+    img{width: 100%;}
+    .blog {
+      padding-top: 10px;
+      margin-left: -15px;
+      flex-direction: column;
+      .col-5{
+        flex: 0 0 75% !important;
+        max-width: 75% !important;
+        padding-bottom: 20px;
+        display: block;
+        margin: 0 auto;
+      }
+      .part_2{
+        margin-left: -15px;
+        padding: 0 40px !important;
+        .col-2 .date {
+          padding: 6.6px;
+          width: 54px;
+          height: 58px;
+        }
+        .col{
+          padding-left: 8px !important;
+          .name_post{padding: 0 0 0 4px;}
+        }
+        .read {padding-top: 10px;}
+      }
+      svg {
+        width: 470px;
+        margin: 10px auto !important;
+      }
+    }
+  }
+  #Clients{
+    .flex-container {
+      margin: 10px 0 0 -8px;
+      & > div{
+       margin-left: 12px !important;
+       margin-right: 12px !important;
+       margin-bottom: 15px;
+        &:nth-child(4){margin-left: 20% !important;}
+      }
+    }
+    .phrase {margin: 25px 0 0 -3.5px;}
+  }
+  #Feedback{
+    .row{
+      padding: 5px 0;
+      flex-direction: column;
+      .row{flex-direction: inherit;}
+      .col-4{
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  }
+  #MyFooter{
+    height: 215px;
+    .flex-container{
+      padding-top: 40px;
+      margin-left: 150px;
+    }
+  }
+}
+@media screen and (min-width:768px) and (max-width: 992px) {
+  #Services, #About, #Works, #Blog, #Clients, #Feedback{padding-top: 40px;}
+  #Home {
+    height: auto;
+    #Welcome_to_STARTUP {margin: 170px 0 2.55rem;}
+    #Get_Started {margin: 58px auto;}
+  }
+  #Home #background, #Call #background{padding-bottom: 45px;}
+  #Services,#About,#Works,#Blog,#Clients,#Feedback{
+    height: auto;
+    padding-bottom: 55px;
+  }
+  #Services .flex-container, #About .parts, #Works .flex-container {margin-top: 40px;}
+  #About .flex-container{margin: 15px 0 0 5px;}
+  #Call{
+    #question {padding: 55px 0 42px;}
+    #Get_Started {margin: 0 auto ;}
+  }
+  #Blog{
+    img{width: 100%;}
+    .blog {
+      padding-top: 10px;
+      .part_2{
+        margin-left: -15px;
+        .col-2 .date {
+          padding: 6.6px;
+          width: 54px;
+          height: 58px;
+        }
+        .col{
+          padding-left: 8px !important;
+          .name_post{padding: 0 0 0 4px;}
+        }
+        .read {padding-top: 10px;}
+      }
+      svg {margin: 10px 15px !important;}
+    }
+  }
+  #Clients{
+    .flex-container {
+      margin: 10px 0 0 -8px;
+      & > div{
+        margin-left: 6px !important;
+        margin-right: 6px !important;
+      }
+    }
+    .phrase {margin: 25px 0 0 -3.5px;}
+  }
+  #Feedback .row{padding-top: 15px;}
+  #MyFooter{
+    height: 215px;
+    .flex-container{
+      padding-top: 40px;
+      margin-left: 250px;
+    }
+  }
+}
+@media screen and (min-width:992px) and (max-width: 1200px) {
+  #Services, #About, #Works, #Blog, #Clients, #Feedback{padding-top: 50px;}
+  #Home {
+    height: auto;
+    #Welcome_to_STARTUP {margin: 200px 0 2.55rem;}
+    #Get_Started {margin: 58px auto;}
+  }
+  #Services,#About,#Works,#Blog,#Clients,#Feedback{
+    height: auto;
+    padding-bottom: 55px;
+  }
+  #Home #background, #Call #background{padding-bottom: 55px;}
+  #Blog{
+    img{width: 100%;}
+    .blog .part_2{
+      .col-2 .date {
+        width: 65px;
+        height: 70px;
+      }
+      .read {padding-top: 10px;}
+    }
+  }
+  #Clients{
+    .flex-container {
+      margin: 10px 0 0 40px;
+      & > div{margin-right: 20px;}
+    }
+    .phrase {margin: 45px 0 0 -3.5px;}
+  }
+  #MyFooter{
+    height: 255px;
+    .flex-container{
+      padding-top: 60px;
+      margin-left: 380px;
+    }
+  }
+}
+@media screen and  (max-width: 1200px) {
+  #Nav .nav-link {
+    text-align: left;
+    padding: 3.5px 16.45px 0 !important;
+  }
+}
 @media (min-width: 1200px){
   #Nav,#Services,#About,#Works,#Blog,#Feedback{
     .container, .container-sm, .container-md, .container-lg, .container-xl {max-width: 1200px !important;}
