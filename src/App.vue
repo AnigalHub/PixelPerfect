@@ -113,7 +113,9 @@ $shadeOfRed:rgb(192, 48, 28);
 #Services, #About, #Works, #Clients{
   padding-top: 95px;
 }
-.navbar-light .navbar-toggler {border-color: $shadeOfWhite !important;}
+.navbar-light .navbar-toggler {
+  border-color: $shadeOfWhite !important;
+}
 
 #Nav{
   #name_company{
@@ -166,6 +168,7 @@ $shadeOfRed:rgb(192, 48, 28);
   width: 50px;
   height: 2px;
 }
+.color_underline{fill:$shadeOfGray;}
 .descr_component{
   font-size: 15.5px;
   letter-spacing: .32px;
@@ -224,7 +227,7 @@ $shadeOfRed:rgb(192, 48, 28);
   height: 1381px;
   .navbar-nav{
     display: flex;
-    margin: 15px auto 0;
+    margin: -10px auto 0;
     flex-direction:initial;
     .nav-link{
       font-size: 16px;
@@ -292,7 +295,7 @@ $shadeOfRed:rgb(192, 48, 28);
         .name_post{
           font-size: 16px;
           padding: 10px 0 0 4px;
-          letter-spacing: -.2px;
+          letter-spacing: -.15px;
         }
         .author{
           font-size: 13px;
@@ -308,12 +311,12 @@ $shadeOfRed:rgb(192, 48, 28);
       }
       .read {
         font-size: 13.25px;
-        letter-spacing: .75px;
+        letter-spacing: .85px;
         padding-top: 24px;
 
       }
     }
-    &:nth-child(4){
+    &:nth-child(2){
       .name_post,.read,span{
         color: $shadeOfRed !important;
       }
@@ -326,7 +329,7 @@ $shadeOfRed:rgb(192, 48, 28);
 }
 #Clients{
   height: 475px;
-  .flex-container {
+  .clients {
     padding-top: 10px;
     margin: 2px 0 0 90px;
     & > div{
@@ -343,7 +346,7 @@ $shadeOfRed:rgb(192, 48, 28);
   .phrase {
     font-size: 17.8px;
     letter-spacing: 0.18px;
-    margin: 61px 0 0 -3.5px;;
+    margin: 61px 0 0 -2px;;
   }
   .author{
     font-size: 21px;
@@ -351,6 +354,16 @@ $shadeOfRed:rgb(192, 48, 28);
     margin-top: 2.4%;
   }
   .phrase,.author{line-height: 1.7;}
+  .points{
+    width: 60px;
+    margin: 35px auto 0 47.7%;
+  }
+  svg{
+    width: 20px;
+    float: left;
+  }
+  .flex-container div:first-child .color{fill: $shadeOfRed;}
+  .color{fill: rgb(221, 221, 221);}
 }
 #Feedback{
   padding: 96px 0 80px;
@@ -374,8 +387,8 @@ $shadeOfRed:rgb(192, 48, 28);
         }
       }
       .name_information{
-        font-size: 13.3px;
-        margin-left: 8px;
+        font-size: 13.25px;
+        margin-left: 9px;
       }
       .descr_information{
         font-size: 12px;
@@ -419,6 +432,7 @@ $shadeOfRed:rgb(192, 48, 28);
 #MyFooter{
   background-color: $shadeOfRed;
   height: 320px;
+  .color_underline{fill:$shadeOfWhite;}
   .flex-container{
     padding-top: 101px;
     margin-left: 465px;
@@ -431,10 +445,7 @@ $shadeOfRed:rgb(192, 48, 28);
     }
   }
   .underline{margin: 32px auto 0;}
-  #designer{
-    padding-top: 25px;
-    font-size: 12px;
-  }
+  #designer{font-size: 12px;}
 }
 
 @media screen and (max-width: 500px) {
@@ -543,7 +554,7 @@ $shadeOfRed:rgb(192, 48, 28);
     }
   }
   #Clients{
-    .flex-container {
+    .clients {
       margin: 10px 0 0;
       & > div{
         margin-left: 30px !important;
@@ -673,7 +684,7 @@ $shadeOfRed:rgb(192, 48, 28);
     }
   }
   #Clients{
-    .flex-container {
+    .clients {
       margin: 10px 0 0 -8px;
       & > div{
        margin-left: 12px !important;
@@ -742,7 +753,7 @@ $shadeOfRed:rgb(192, 48, 28);
     }
   }
   #Clients{
-    .flex-container {
+    .clients {
       margin: 10px 0 0 -8px;
       & > div{
         margin-left: 6px !important;
@@ -783,7 +794,7 @@ $shadeOfRed:rgb(192, 48, 28);
     }
   }
   #Clients{
-    .flex-container {
+    .clients {
       margin: 10px 0 0 40px;
       & > div{margin-right: 20px;}
     }
