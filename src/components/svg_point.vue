@@ -1,0 +1,15 @@
+<template>
+    <svg xmlns="http://www.w3.org/2000/svg" width="13px" height="13px">
+        <path class="color" d="M6.500,-0.000 C10.090,-0.000 13.000,2.910 13.000,6.500 C13.000,10.090 10.090,13.000 6.500,13.000 C2.910,13.000 -0.000,10.090 -0.000,6.500 C-0.000,2.910 2.910,-0.000 6.500,-0.000 Z"/>
+    </svg>
+</template>
+
+<script>
+    export default {
+        name: "svg_point"
+    }
+</script>
+
+<style scoped>
+
+</style>
