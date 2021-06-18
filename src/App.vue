@@ -116,7 +116,6 @@ $shadeOfRed:rgb(192, 48, 28);
 .navbar-light .navbar-toggler {
   border-color: $shadeOfWhite !important;
 }
-
 #Nav{
   #name_company{
     font-size: 23px;
@@ -207,9 +206,9 @@ $shadeOfRed:rgb(192, 48, 28);
   }
   .flex-container{
     margin: 35px 0 0 5px;
+    position: relative;
     & > div{
       img{width: 98.5%;}
-
       width: 23%;
       margin: 0 1%;
       .text{margin: 15px 0 0 1%;}
@@ -221,6 +220,18 @@ $shadeOfRed:rgb(192, 48, 28);
       &:nth-child(2n+1) .who{margin-left: -2px;}
       &:nth-child(4) .who{margin-left: 10px;}
     }
+  }
+  #left,#right{
+    position: absolute;
+    top: 34%;
+    width: 34.5px;
+    height: 38px;
+    padding: 6.5px 11px 10px 14px;
+  }
+  #left{background: $shadeOfGray;}
+  #right{
+    background: $shadeOfRed;
+    left: 94.6%;
   }
 }
 #Works {
