@@ -208,9 +208,30 @@ $shadeOfRed:rgb(192, 48, 28);
     margin: 35px 0 0 5px;
     position: relative;
     & > div{
+      position: relative;
       img{width: 98.5%;}
       width: 23%;
       margin: 0 1%;
+      &:hover .svgs {display: block;}
+      .svgs{
+        display: none;
+        position: absolute;
+        top: 61%;
+        width: 48%;
+        margin: 0 auto 0 28% !important;
+        div{
+          float: left;
+          width: 26px;
+          height: 26px;
+          margin-right:4%;
+          svg{
+            margin: 20% auto;
+            display: block;
+          }
+          &:hover{background: $shadeOfRed;}
+        }
+      }
+      &:hover img{filter: brightness(80%);}
       .text{margin: 15px 0 0 1%;}
       .who{
         font-size: 12.6px;
@@ -223,16 +244,15 @@ $shadeOfRed:rgb(192, 48, 28);
   }
   #left,#right{
     position: absolute;
+    background: rgb(85, 85, 85, .48);
     top: 34%;
     width: 34.5px;
     height: 38px;
     padding: 6.5px 11px 10px 14px;
+    &:hover{background: $shadeOfRed;}
   }
-  #left{background: $shadeOfGray;}
-  #right{
-    background: $shadeOfRed;
-    left: 94.6%;
-  }
+  #right{left: 94.6%;}
+  .arrow{fill:rgb(221,221,221);}
 }
 #Works {
   height: 1381px;
