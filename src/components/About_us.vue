@@ -8,15 +8,28 @@
             <div class="flex-container">
                 <div v-for="(img,index) in Imgs" :key="index">
                     <img :src="img.img_src" :alt="img.img_alt">
+                    <div class="svgs">
+                        <div v-for="(value,index) in Svgs" :key="index">
+                            <component :is="value.svg"/>
+                        </div>
+                    </div>
                     <div class="text">{{img.text}}</div>
                     <div class="who">{{img.who}}</div>
                 </div>
+                <div id="left"><component :is="left_arrow"/></div>
+                <div id="right"><component :is="right_arrow"/></div>
             </div>
         </b-container>
     </div>
 </template>
 
 <script>
+    import facebookSVG from "./svg_about/facebook_svg";
+    import twitterSVG from "./svg_about/twitter_svg";
+    import googleSVG from "./svg_about/google_svg";
+    import inSVG from "./svg_about/in_svg";
+    import left_arrowSVG from "./svg_about/left_arrow_svg";
+    import right_arrowSVG from "./svg_about/right_arrow_svg";
     import Layout from "./layout";
     export default {
         name: "About_us",
@@ -34,7 +47,10 @@
                     {img_src:"./About/RUBEL_MIAH.png",img_alt:"RUBEL_MIAH",text:'RUBEL MIAH',who:'Lead WordPress Developer'},
                     {img_src:"./About/SHAMIM_MIA.png",img_alt:"SHAMIM_MIA",text:'SHAMIM MIA',who:'Sr. Web Developer'},
                     {img_src:"./About/JOHN_DOE.png",img_alt:"JOHN_DOE",text:'JOHN DOE',who:'Front-end Developer'},
-                ]
+                ],
+                Svgs:[{svg:facebookSVG},{svg:twitterSVG},{svg:googleSVG},{svg:inSVG},],
+                left_arrow:left_arrowSVG,
+                right_arrow:right_arrowSVG,
             }
         }
     }
