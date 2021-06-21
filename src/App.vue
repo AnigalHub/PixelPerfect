@@ -68,10 +68,10 @@ $shadeOfGray: rgb(85, 85, 85);
 $shadeOfLightGray: rgb(119, 119, 119);
 $shadeOfRed:rgb(192, 48, 28);
 
-#Home #Welcome_to_STARTUP, #Home #Get_Started, .name_component, #Services .name_services, #Call #Get_Started, #Blog .date, #Blog .name_post, #Blog .read, #Feedback .name_information, #Feedback input, #Feedback textarea, #Feedback button, #MyFooter #designer{
+#Home #Welcome_to_STARTUP, #Home #Get_Started, .name_component, #Services .name_services, #Works button .view, #Call #Get_Started, #Blog .date, #Blog .name_post, #Blog .read, #Feedback .name_information, #Feedback input, #Feedback textarea, #Feedback button, #MyFooter #designer{
   text-transform: uppercase;
 }
-#Home, .name_component,.descr_component, #Services, #About .flex-container .text, #About .who, #Call, #Blog .date, #Clients .phrase, #Clients .author, #Feedback button, #MyFooter #designer{
+#Home, .name_component,.descr_component, #Services, #About .flex-container .text, #About .who, #Works .work_hover, #Works .type_work, #Call, #Blog .date, #Clients .phrase, #Clients .author, #Feedback button, #MyFooter #designer{
   text-align: center;
 }
 #Home #Your_Favourite_Creative_Age,.descr_component,.text, #About .who, #Works, #Call #question, #Call #Get_Started, #Blog .author, #Blog .description, #Blog .read, #Clients .phrase, #Clients .author, #Feedback .descr_information, #Feedback .warning, #Feedback input, #Feedback textarea, #Feedback button, #MyFooter #designer{
@@ -80,7 +80,7 @@ $shadeOfRed:rgb(192, 48, 28);
 #Nav #name_company, #Nav .nav-link, #Home #Welcome_to_STARTUP, #Home #Get_Started, .name_component, #Services .name_services, #About .flex-container .text, #Blog .date, #Blog .name_post, #Feedback .name_information{
   font-family: 'Montserrat', sans-serif;
 }
-.navbar-light .navbar-toggler, #Nav #name_company, #Nav .nav-link, #Home, #Call, #MyFooter #designer{
+.navbar-light .navbar-toggler, #Nav #name_company, #Nav .nav-link, #Home, #Works .work_hover, #Call, #MyFooter #designer{
   color: $shadeOfWhite !important;
 }
 .name_component, .descr_component, #Services, #About, #Works a, #Blog .name_post, #Blog .description, #Clients .phrase, #Clients .author, #Feedback, #Feedback button{
@@ -269,7 +269,49 @@ $shadeOfRed:rgb(192, 48, 28);
   }
   .flex-container {
     margin-top: 60px;
-    & > img {
+    & > div {
+      position: relative;
+      &:hover{
+        background-color: $shadeOfRed;
+        img{opacity: .45;}
+        .work_hover{display: block;}
+      }
+      .work_hover{
+        display: none;
+        position: absolute;
+        top:32%;
+        margin-left: 35%;
+        .name_work{
+          letter-spacing: 1.2px;
+          margin-left: -.75px;
+        }
+        .type_work{
+          margin: 6px 0 0 2px;
+          font-size: 12px;
+        }
+        button{
+          .view{
+            font-size: 13.4px;
+            line-height: 1.714;
+            letter-spacing: 1px;
+            float: left;
+            padding: 1px 0 0 21px;
+          }
+          svg{
+            margin-top: -2px;
+            margin-left: -9px;
+            .arrow{fill:$shadeOfRed;}
+          }
+          padding: 8px 0 7.5px;
+          border: none !important;
+          background: $shadeOfWhite;
+          margin: 25px 0 0 2px;
+          color: #c0301c;
+          border-radius: 0 !important;
+          width: 100px;
+        }
+      }
+      img{width: 100%;}
       width: 30.76%;
       height: 100%;
       margin: 0 1.27% 2.6% !important;
@@ -519,21 +561,32 @@ $shadeOfRed:rgb(192, 48, 28);
         img{width: 94%;}
         width: 46%;
         margin: 0 1%;
+        .svgs {
+          top: 45%;
+          width: 100%;
+          margin: 0 auto 0 2.5% !important;
+        }
         .who{padding-bottom: 10px;}
       }
     }
+    #left,#right{top: 38%;}
+    #right{left: 81%;}
   }
   #Works {
      .navbar-nav {
       display: block;
-       text-align: center;
-       .nav-link{
-         padding: 0.25rem 0 !important;
-       }
+      text-align: center;
+      .nav-link{padding: 0.25rem 0 !important;}
     }
     .flex-container {
       margin-top: 60px;
-      & > img {width: 47%;}
+      & > div {
+        width: 47%;
+        .work_hover {
+          top: 5% !important;
+          margin-left: 12% !important;
+        }
+      }
     }
   }
   #Call{
@@ -666,14 +719,27 @@ $shadeOfRed:rgb(192, 48, 28);
         img{width: 94%;}
         width: 46%;
         margin: 0 1%;
+        .svgs {
+          top: 58%;
+          width: 100%;
+          margin: 0 auto 0 15% !important;
+        }
         .who{padding-bottom: 10px;}
       }
     }
+    #left,#right{top: 38%;}
+    #right{left: 84%;}
   }
   #Works {
     .flex-container {
       margin-top: 60px;
-      & > img {width: 47%;}
+      & > div {
+        width: 47%;
+        .work_hover {
+          top:22% !important;
+          margin-left: 22% !important;
+        }
+      }
     }
   }
   #Call{
@@ -752,6 +818,21 @@ $shadeOfRed:rgb(192, 48, 28);
     #Welcome_to_STARTUP {margin: 170px 0 2.55rem;}
     #Get_Started {margin: 58px auto;}
   }
+  #About{
+    .flex-container > div .svgs {
+      top: 47%;
+      width: 90%;
+      margin: 0 auto 0 5% !important;
+    }
+    #left,#right{top: 25%;}
+    #right{left: 92.5%;}
+  }
+  #Works{
+    .work_hover {
+      top:22% !important;
+      margin-left: 22% !important;
+    }
+  }
   #Home #background, #Call #background{padding-bottom: 45px;}
   #Services,#About,#Works,#Blog,#Clients,#Feedback{
     height: auto;
@@ -808,6 +889,17 @@ $shadeOfRed:rgb(192, 48, 28);
     height: auto;
     #Welcome_to_STARTUP {margin: 200px 0 2.55rem;}
     #Get_Started {margin: 58px auto;}
+  }
+  #About{
+    .flex-container > div .svgs {
+      width: 60%;
+      margin: 0 auto 0 20% !important;
+    }
+    #left,#right{top: 30%;}
+    #right{left: 94%;}
+  }
+  #Works{
+    .work_hover {margin-left: 30% !important;}
   }
   #Services,#About,#Works,#Blog,#Clients,#Feedback{
     height: auto;
