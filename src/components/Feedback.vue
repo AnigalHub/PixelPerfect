@@ -1,17 +1,39 @@
 <template>
     <div id="Feedback">
         <b-container>
-            <div class="name_component">GET IN TOUCH</div>
-            <svg class="underline" xmlns="http://www.w3.org/2000/svg" width="50px" height="2px">
-                <path fill-rule="evenodd"  fill="rgb(85, 85, 85)" d="M0.000,1.999 L0.000,-0.000 L50.000,-0.000 L50.000,1.999 L0.000,1.999 "/>
-            </svg>
-            <p class="descr_component">Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
+            <layout :name_component="name_component" :descr_component="descr_component"/>
             <b-row>
-                <b-col cols="3">
-
+                <b-col cols="4">
+                    <b-row v-for="(value,index) in Information" :key="index">
+                        <b-col cols="1">
+                            <component :is="value.svg"/>
+                        </b-col>
+                        <b-col>
+                            <div class="name_information">{{value.name_information}}</div>
+                            <div class="descr_information">{{value.descr_information_1}}<br>
+                                <div class="part_information">{{value.descr_information_2}}</div>
+                            </div>
+                        </b-col>
+                    </b-row>
                 </b-col>
                 <b-col>
-
+                    <form>
+                        <b-row>
+                            <b-col>
+                                <input v-model="feedback.name" type="text" class="form-control" placeholder="I" id="name" name="name" required="" data-validation-required-message="Please enter your name">
+                                <input v-model="feedback.subject" type="text" class="form-control" placeholder="YOUR SUBJECT" id="subject" name="subject" required="" data-validation-required-message="Please enter your subject">
+                            </b-col>
+                            <b-col>
+                                <input v-model="feedback.email" type="text" class="form-control" placeholder="YOUR E-MAIL" id="email" name="email" required="" data-validation-required-message="Please enter your e-mail">
+                                <input v-model="feedback.company_name" type="text" class="form-control" placeholder="COMPANY NAME" id="company_name" name="company_name" required="" data-validation-required-message="Please enter a company name">
+                            </b-col>
+                        </b-row>
+                        <textarea v-model="feedback.message" class="form-control" placeholder="WRITE YOUR MESSAGE" id="message" name="message" required="" data-validation-required-message="Please enter your message"></textarea>
+                        <b-button>Send Message</b-button>
+                        <div class="warning">
+                            <span>*</span>We'll contact you as as possible.We don't reply on Monday.
+                        </div>
+                    </form>
                 </b-col>
             </b-row>
         </b-container>
@@ -19,49 +41,49 @@
 </template>
 
 <script>
+    import MapSVG from '../components/svg_feedback/map_svg';
+    import TelephoneSVG from '../components/svg_feedback/telephone_svg';
+    import EmailSVG from '../components/svg_feedback/email_svg';
+    import Layout from "./layout";
     export default {
-        name: "Feedback"
+        name: "Feedback",
+        components: {Layout},
+        data(){
+            return {
+                feedback:{
+                    name: '',
+                    subject: '',
+                    email: '',
+                    company_name: '',
+                    message: '',
+                },
+                name_component:"Get in touch",
+                descr_component:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet",
+                Information:[
+                    {
+                        svg:MapSVG,
+                        name_information:"Address",
+                        descr_information_1:"312, 7th Ave, New York",
+                        descr_information_2:"NY 101200, United States of America",
+                    },
+                    {
+                        svg:TelephoneSVG,
+                        name_information:"Hotline (24x7)",
+                        descr_information_1:"+65 0052 300, +65 88251 210",
+                        descr_information_2:"+88 01723 511 340",
+                    },
+                    {
+                        svg:EmailSVG,
+                        name_information:"E-mail",
+                        descr_information_1:"shapedtheme@gmail.com",
+                        descr_information_2:"khalilkode@gmail.com",
+                    }
+                ]
+            }
+        },
     }
 </script>
 
 <style scoped lang="scss">
-    #Feedback {
-        padding-top: 90px;
-        padding-bottom: 80px;
-        height: 70vh;
 
-    .name_component {
-        font-size: 20px;
-        font-family: "Montserrat";
-        color: rgb(85, 85, 85);
-        font-weight: 600;
-        text-transform: uppercase;
-        line-height: 1.2;
-        text-align: center;
-        z-index: 416;
-    }
-
-    .descr_component {
-        font-size: 15.5px;
-        font-family: "Roboto Slab";
-        color: rgb(85, 85, 85);
-        letter-spacing: .28px;
-        line-height: 1.5;
-        text-align: center;
-        margin-top: 25.25px;
-        padding-bottom: 25px;
-    }
-
-    .underline {
-        background-color: rgb(85, 85, 85);
-        margin-top: 26px;
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        width: 50px;
-        height: 2px;
-
-    }
-
-    }
 </style>
