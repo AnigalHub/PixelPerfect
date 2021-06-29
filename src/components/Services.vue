@@ -1,14 +1,10 @@
 <template>
     <div id="Services">
         <b-container>
-            <div class="name_component">SERVICES</div>
-            <svg class="underline" xmlns="http://www.w3.org/2000/svg" >
-                <path fill-rule="evenodd"  fill="rgb(85, 85, 85)" d="M0.000,1.999 L0.000,-0.000 L50.000,-0.000 L50.000,1.999 L0.000,1.999 "/>
-            </svg>
-            <p class="descr_component">We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
+            <layout :name_component="name_component" :descr_component="descr_component"/>
             <div class="flex-container">
                 <div v-for="(value, index) in Services" :key="index">
-                    <div style="margin-left: 4.7%">
+                    <div class="svg">
                         <component :is="value.svg" class="svg_services"/>
                     </div>
                     <p class="name_services">{{value.name_services}}</p>
@@ -20,14 +16,17 @@
 </template>
 
 <script>
-    import CleanTypographySVG from '../components/svg_services/clean_typography';
-    import RockSolidCodeSVG from '../components/svg_services/rock_solid_code';
-    import ExpertSupportSVG from '../components/svg_services/expert_support';
+    import CleanTypographySVG from '../components/svg_services/clean_typography_svg';
+    import RockSolidCodeSVG from '../components/svg_services/rock_solid_code_svg';
+    import ExpertSupportSVG from '../components/svg_services/expert_support_svg';
+    import Layout from "./layout";
     export default {
-        components: {CleanTypographySVG, RockSolidCodeSVG, ExpertSupportSVG},
+        components: {Layout, CleanTypographySVG, RockSolidCodeSVG, ExpertSupportSVG},
         name: "Services",
         data(){
             return{
+                name_component:"Services",
+                descr_component:"We offer ipsum dolor sit amet, consetetur sadipscing elitr amet",
                 Services:[
                     {name_services:'Clean Typography', svg:CleanTypographySVG, descr_services:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.'},
                     {name_services:'Rock solid Code', svg:RockSolidCodeSVG, descr_services:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.'},
