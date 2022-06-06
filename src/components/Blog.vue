@@ -38,7 +38,7 @@
                 descr_component:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet",
                 Blogs:[
                     {
-                        img_src:"./Blog/blog1.png",
+                        img_src:"./Blog/blog1.jpg",
                         img_alt:"blog1",
                         date:"18",
                         month:"ост",
@@ -48,7 +48,7 @@
                         button:"Read more",
                     },
                     {
-                        img_src:"./Blog/blog2.png",
+                        img_src:"./Blog/blog2.jpg",
                         img_alt:"blog2",
                         date:"18",
                         month:"ост",
