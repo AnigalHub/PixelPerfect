@@ -131,7 +131,7 @@ $shadeOfRed:rgb(192, 48, 28);
   }
 }
 #Home{
-  background: url("../public/Home/background.png") 100% 100% no-repeat;
+  background: url("../public/Home/background.jpg") 100% 100% no-repeat;
   background-size:100% 100%;
   height: 770px;
   #background{
@@ -319,7 +319,7 @@ $shadeOfRed:rgb(192, 48, 28);
   }
 }
 #Call{
-  background: url("../public/Call/Call.png") 100% 100% no-repeat;
+  background: url("../public/Call/Call.jpg") 100% 100% no-repeat;
   background-size:100% 100%;
   #background{
     background-color: rgb(192, 48, 28,.65);
